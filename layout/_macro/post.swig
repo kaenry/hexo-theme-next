@@ -379,17 +379,12 @@
       </div>
     {% endif %}
 
-    {% if theme.post_copyright.enable and not is_index %}
-      <div>
-        {% include 'post-copyright.swig' with { post: post } %}
-      </div>
-    {% endif %}
-
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
+        <i class="fa fa-tag"></i>
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag">{{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -429,6 +424,11 @@
             </span>
           </div>
         {% endif %}
+        </div>
+      {% endif %}
+      {% if theme.post_copyright.enable and not is_index %}
+        <div class="post-copyright-content">
+          {% include 'post-copyright.swig' with { post: post } %}
         </div>
       {% endif %}
       {% endif %}

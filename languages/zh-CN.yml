@@ -36,6 +36,7 @@ post:
   copy_success: 复制成功
   copy_failure: 复制失败
   copyright:
+    category: 本文分类
     author: 本文作者
     link: 本文链接
     license_title: 版权声明
