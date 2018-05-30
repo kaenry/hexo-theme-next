@@ -5,7 +5,7 @@
   {% endif %}
   <script src="{{ needmoreshare2_js }}"></script>
 
-  <script>
+  <script type="application/x-javascript">
     {% if theme.needmoreshare2.postbottom.enable %}
       pbOptions = {};
       {% for k,v in theme.needmoreshare2.postbottom.options %}
